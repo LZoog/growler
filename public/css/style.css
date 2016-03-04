@@ -38,7 +38,13 @@ section {
   max-width: 1300px;
 }
 
-#username_submit {
+hr {
+  width: 800px;
+  border: 1px dashed #f26a44;
+}
+
+#username_submit, #new_growl {
+  border-radius: 10px;
   border: 1px dotted #2e9598;
   padding: 5px;
   font-size: .9em;
@@ -48,6 +54,10 @@ section {
 
 #name_submit {
   font-size: 1em;
+}
+
+#new_growl {
+  height: 70px;
 }
 
 .growl-post {
@@ -73,6 +83,11 @@ section {
 .entire-post {
   width: 500px;
   margin: 50px auto;
+}
+
+.new-post {
+  width: 600px;
+  margin: 0 auto 30px;
 }
 
 footer {

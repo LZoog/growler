@@ -1,16 +1,19 @@
-<form action="/growling" method="post">
-  Growl at me, bro: <br>
-    <input type="text" name="growl[input]"><br>
+ <article class="new-post">
+   <form action="/growling" method="post">
+  <h3>Growl at me, bro:</h3>
+    <textarea rows="3" cols="50" id="new_growl" maxlength="142" name="growl[input]"></textarea><br>
     <!-- <input type="hidden" value="grabuserIDbasedonUsername" name="growl[user_id]"> -->
-    <input type="text" placeholder="userid" name="growl[user_id]">
-    <input type="submit" value="Grrr! ">
+    <input type="text" placeholder="userid" id="userid" name="growl[user_id]">
+    <input type="submit" value="Grrr! 😡">
 <!--     <alert("Hey, your user id is <%= @userid %>")
  --></form>
-<% @growls.each do |growl| %>
+ </article>
+ <hr />
 
-<p> <%= growl.input %><br>
 
-   ~ <%= growl.user.username %>
- </p>
-
+ <% @growls.each do |growl| %>
+ <article class="entire-post">
+   <p class="growl-post"><%= growl.input %><img src="img/v.png"></p>
+   <p class="growl-user">~ <%= growl.user.username %></p>
+ </article>
 <% end %>
