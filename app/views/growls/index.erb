@@ -1,0 +1,16 @@
+<h1>Let's Get Ready to Growlble!</h1>
+
+<form action="/" method="post">
+  New Growl: <br>
+    <input type="text" name="growl[input]"><br>
+    <input type="text" placeholder="userid" name="growl[user_id]">
+    <input type="submit" value="Grrr! ">
+</form>
+<% @growls.each do |growl| %>
+
+<p> <%= growl.input %><br>
+
+   ~ <%= growl.user_id %>
+ </p>
+
+<% end %>
