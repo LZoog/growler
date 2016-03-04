@@ -13,9 +13,22 @@ header {
 }
 
 header h1 {
+  text-align: center;
+  position: relative;
+  top: 40px;
   color: white;
-  text-shadow: 3px 3px 4px #52132f;
-  font-size: 5em;
+  text-shadow: 4px 4px 7px #52132f;
+  font-size: 4em;
+}
+
+header h2 {
+  text-align: center;
+  position: relative;
+  left: 200px;
+  font-size: 2em;
+  color: white;
+  font-weight: normal;
+  text-shadow: 1px 1px 2px black;
 }
 
 section {
@@ -25,14 +38,41 @@ section {
   max-width: 1300px;
 }
 
-.growl-post {
-  width: 500px;
-  padding: 10px;
-  border: 1px solid #bbbbbb;
+#username_submit {
+  border: 1px dotted #2e9598;
+  padding: 5px;
+  font-size: .9em;
+  height: 20px;
+  margin-bottom: 4px;
 }
 
-.growl-post2 {
-  border: 3px dotted #a8216b;
+#name_submit {
+  font-size: 1em;
+}
+
+.growl-post {
+  position: relative;
+  padding: 15px;
+  border: 1px solid #bbbbbb;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px #707070;
+  text-align: center;
+}
+
+.growl-post img {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+}
+
+.growl-user {
+  font-weight: bold;
+  color: #a8216b;
+}
+
+.entire-post {
+  width: 500px;
+  margin: 50px auto;
 }
 
 footer {

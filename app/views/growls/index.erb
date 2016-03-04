@@ -1,14 +1,15 @@
 
 <h2>Yo, what your name is?</h2>
 <form action="/" method="post">
-  <input type="text" name="username"><br>
-    <input type="submit" value="Say my name!">
+  <input type="text" name="username" maxlength="20" id="username_submit"><br>
+    <input type="submit" id="name_submit" value="Say my name!">
 </form>
 
 <% @growls.each do |growl| %>
-<p class="growl-post"><%= growl.input %></p>
-<p class="growl-user">~ <%= growl.user.username %></p>
-
+<article class="entire-post">
+  <p class="growl-post"><%= growl.input %><img src="img/v.png"></p>
+  <p class="growl-user">~ <%= growl.user.username %></p>
+</article>
 
 
 <% end %>
