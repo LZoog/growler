@@ -14,8 +14,9 @@ class GrowlsController < ApplicationController
     #   @username_array.push User.all[i].username
     # end
     @user = User.new
-    @user.username = params["username"]
+    @user.username = params["username"].strip
     @user.save
+    # @userid = User.id
 
     redirect '/growling'
   end
