@@ -1,5 +1,5 @@
 
-<h2>Hi there, what's your name?</h2>
+<h2>Yo, what your name is?</h2>
 <form action="/" method="post">
   <input type="text" name="username"><br>
     <input type="submit" value="Say my name!">
@@ -7,7 +7,7 @@
 
 <% @growls.each do |growl| %>
 <p> <%= growl.input %><br>
-   ~ <%= growl.user_id %>
+   ~ <%= growl.user.username %>
 </p>
 
 

@@ -2,7 +2,7 @@ class GrowlsController < ApplicationController
   set :views, Proc.new { File.join(root, "views/growls") }
 
   get '/' do
-    @growls = Growl.all
+    @growls = Growl.all.order("id DESC")
     erb :index
   end
 
@@ -21,7 +21,7 @@ class GrowlsController < ApplicationController
   end
 
   get '/growling' do
-    @growls = Growl.all
+    @growls = Growl.all.order("id DESC")
     erb :growling
   end
 
