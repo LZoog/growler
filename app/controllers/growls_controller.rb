@@ -13,10 +13,10 @@ class GrowlsController < ApplicationController
     #     break
     #   @username_array.push User.all[i].username
     # end
-
     @user = User.new
-    @user.username = params["username"].strip.downcase
+    @user.username = params["username"]
     @user.save
+
     redirect '/growling'
   end
 
@@ -30,4 +30,5 @@ class GrowlsController < ApplicationController
     @growl.save
     redirect '/growling'
   end
+
 end
