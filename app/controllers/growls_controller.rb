@@ -1,19 +1,33 @@
 class GrowlsController < ApplicationController
   set :views, Proc.new { File.join(root, "views/growls") }
 
-get '/' do
+  get '/' do
+    @growls = Growl.all
+    erb :index
+  end
 
-  @growls = Growl.all
+  post '/' do
+    # @username_array = []
+    # for i in 0..1000
+    #   if i > User.all.length
+    #     break
+    #   @username_array.push User.all[i].username
+    # end
 
-  erb :index
-end
+    @user = User.new
+    @user.username = params["username"].strip.downcase
+    @user.save
+    redirect '/growling'
+  end
 
-post '/' do
+  get '/growling' do
+    @growls = Growl.all
+    erb :growling
+  end
 
-  @growl = Growl.new(params["growl"])
-  @growl.save
-
-redirect '/'
-end
-
+  post '/growling' do
+    @growl = Growl.new(params["growl"])
+    @growl.save
+    redirect '/growling'
+  end
 end
