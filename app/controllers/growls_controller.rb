@@ -7,22 +7,16 @@ class GrowlsController < ApplicationController
   end
 
   post '/' do
-    # @username_array = []
-    # for i in 0..1000
-    #   if i > User.all.length
-    #     break
-    #   @username_array.push User.all[i].username
-    # end
     @user = User.new
     @user.username = params["username"].strip
     @user.save
     @userhash = User.find_by(username: @user.username).id
-    # @userid = @userhash.id
 
-    redirect '/growling'
+    redirect "/growling?user=#{@userhash}"
   end
 
   get '/growling' do
+    @id = params["user"]
     @growls = Growl.all.order("id DESC")
     erb :growling
   end

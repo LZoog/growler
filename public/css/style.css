@@ -43,6 +43,10 @@ hr {
   border: 1px dashed #f26a44;
 }
 
+#grrr {
+  font-size: 1em;
+}
+
 #username_submit, #new_growl {
   border-radius: 10px;
   border: 1px dotted #2e9598;

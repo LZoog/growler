@@ -1,11 +1,12 @@
  <article class="new-post">
+   <%if @id%>
+    <p>Your user ID is: <%=@id%>. Enter that below, yo!</p>
+    <%end%>
    <form action="/growling" method="post">
   <h3>Growl at me, bro:</h3>
     <textarea rows="3" cols="50" id="new_growl" maxlength="142" name="growl[input]"></textarea><br>
-    <!-- <input type="hidden" value="grabuserIDbasedonUsername" name="growl[user_id]"> -->
     <input type="text" placeholder="userid" id="userid" name="growl[user_id]">
-    <input type="submit" value="Grrr! 😡">
-    <alert("Hey, your user id is <%= @userhash %>")
+    <input type="submit" value="Grrr! 😡" id="grrr">
 </form>
  </article>
  <hr />
