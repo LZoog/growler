@@ -1,5 +1,5 @@
 <form action="/growling" method="post">
-  New Growl: <br>
+  Growl at me, bro: <br>
     <input type="text" name="growl[input]"><br>
     <!-- <input type="hidden" value="grabuserIDbasedonUsername" name="growl[user_id]"> -->
     <input type="text" placeholder="userid" name="growl[user_id]">
@@ -9,7 +9,7 @@
 
 <p> <%= growl.input %><br>
 
-   ~ <%= growl.user_id %>
+   ~ <%= growl.user.username %>
  </p>
 
 <% end %>
