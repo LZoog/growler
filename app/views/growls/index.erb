@@ -6,9 +6,8 @@
 </form>
 
 <% @growls.each do |growl| %>
-<p> <%= growl.input %><br>
-   ~ <%= growl.user.username %>
-</p>
+<p class="growl-post"><%= growl.input %></p>
+<p class="growl-user">~ <%= growl.user.username %></p>
 
 
 
